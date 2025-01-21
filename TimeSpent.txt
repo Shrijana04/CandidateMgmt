@@ -1,0 +1,6 @@
+### Total Time Spent
+
+1. **Project Setup**: 2 hours
+2. **API Development**: 3 hours
+3. **Unit Testing**: 2 hours
+4. **Testing and Cleanup**: 1 hour
