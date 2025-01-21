@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidate.HubAPI", "JobCandidate.HubAPI.csproj", "{B303359B-CE7C-4056-9A50-E14CFDF99865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidate.HubAPI", "JobCandidate.HubAPI.csproj", "{B303359B-CE7C-4056-9A50-E14CFDF99865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidate.Tests", "..\JobCandidate.Tests\JobCandidate.Tests.csproj", "{D246CF90-EE77-4C06-8DAE-9CFF08774F7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B303359B-CE7C-4056-9A50-E14CFDF99865}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B303359B-CE7C-4056-9A50-E14CFDF99865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B303359B-CE7C-4056-9A50-E14CFDF99865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D246CF90-EE77-4C06-8DAE-9CFF08774F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D246CF90-EE77-4C06-8DAE-9CFF08774F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D246CF90-EE77-4C06-8DAE-9CFF08774F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D246CF90-EE77-4C06-8DAE-9CFF08774F7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

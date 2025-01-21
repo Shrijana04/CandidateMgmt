@@ -6,7 +6,7 @@ namespace JobCandidate.HubAPI
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Candidate> Candidates { get; set; }
+        public virtual DbSet<Candidate> Candidates { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 

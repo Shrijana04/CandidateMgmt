@@ -60,9 +60,14 @@ namespace JobCandidate.HubAPI.Controllers
                 var candidate = await _repository.GetCandidateByEmail(input.Email);
                 if (candidate != null)
                 {
-                    return BadRequest("Email address already exist.");
+                    // update candidate information
+                    _mapper.Map(input, candidate);
+                  await  _repository.UpdateAsync(candidate);
                 }
-                await _repository.AddAsync(_mapper.Map<Candidate>(input));
+                else
+                {
+                    await _repository.AddAsync(_mapper.Map<Candidate>(input));
+                }
                 return Ok($"Candidate saved successfully.");
             }
             catch (Exception ex)

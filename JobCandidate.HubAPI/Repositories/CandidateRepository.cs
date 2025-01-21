@@ -21,8 +21,8 @@ namespace JobCandidate.HubAPI.Repositories
             if (!string.IsNullOrEmpty(searchText))
             {
                 query = query.Where(c =>
-                    (c.FirstName + " " + c.LastName).Contains(searchText) || // Concatenate FirstName and LastName
-                    c.Email.Contains(searchText) ||
+                    (c.FirstName + " " + c.LastName).ToLower().Contains(searchText.Trim().ToLower()) || // Concatenate FirstName and LastName
+                    c.Email.ToLower().Contains(searchText.Trim().ToLower()) ||
                     c.PhoneNumber.Contains(searchText));
             }
 
@@ -44,13 +44,13 @@ namespace JobCandidate.HubAPI.Repositories
                         ? query.OrderByDescending(c => c.PhoneNumber)
                         : query.OrderBy(c => c.PhoneNumber),
                     _ => isDescending
-                        ? query.OrderByDescending(c => c.Id)
-                        : query.OrderBy(c => c.Id) // Default sorting by Id
+                        ? query.OrderByDescending(c => c.CreationTime)
+                        : query.OrderBy(c => c.CreationTime) // Default sorting by Id
                 };
             }
             else
             {
-                query = query.OrderBy(c => c.Id); // Default sorting by Id
+                query = query.OrderBy(c => c.CreationTime); // Default sorting by Id
             }
 
             // Step 3: Get total count before applying pagination
@@ -96,7 +96,7 @@ namespace JobCandidate.HubAPI.Repositories
         public async Task<Candidate> GetCandidateByEmail(string email)
         {
 
-            return await _context.Candidates.FirstOrDefaultAsync(x => x.Email == email);
+            return await Task.FromResult(_context.Candidates.SingleOrDefault(x => x.Email == email));
         }
     }
 }
