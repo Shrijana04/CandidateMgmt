@@ -18,11 +18,6 @@ namespace JobCandidate.HubAPI.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-        // 1. Get All Candidates
-        /// <summary>
-        /// Retrieves all candidates with optional search, sorting, and pagination.
-        /// </summary>
-        /// <returns>A list of candidates and the total count.</returns>
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] GetCandidateInput input)
         {
