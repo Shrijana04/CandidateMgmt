@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JobCandidate.HubAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250119161248_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250121120210_initial-create")]
+    partial class initialcreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,7 +32,6 @@ namespace JobCandidate.HubAPI.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CallTimeInterval")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -55,7 +54,6 @@ namespace JobCandidate.HubAPI.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("GitHubProfileUrl")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -68,12 +66,10 @@ namespace JobCandidate.HubAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LinkedInProfileUrl")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 

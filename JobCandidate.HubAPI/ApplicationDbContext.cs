@@ -24,20 +24,16 @@ namespace JobCandidate.HubAPI
                       .HasMaxLength(CandidateConsts.FirstNameMaxLength)
                       .IsRequired();
                 entity.Property(c => c.PhoneNumber)
-                    .HasMaxLength(CandidateConsts.PhoneNumberMaxLength)
-                    .IsRequired();
+                    .HasMaxLength(CandidateConsts.PhoneNumberMaxLength);
                 entity.Property(c => c.Email)
                       .HasMaxLength(CandidateConsts.EmailMaxLength)
                       .IsRequired();
                 entity.Property(c => c.CallTimeInterval)
-                     .HasMaxLength(CandidateConsts.CallTimeIntervalMaxLength)
-                     .IsRequired();
+                     .HasMaxLength(CandidateConsts.CallTimeIntervalMaxLength);
                 entity.Property(c => c.LinkedInProfileUrl)
-                .HasMaxLength(CandidateConsts.LinkedInProfileUrlMaxLength)
-                .IsRequired();
+                .HasMaxLength(CandidateConsts.LinkedInProfileUrlMaxLength);
                 entity.Property(c => c.GitHubProfileUrl)
-                .HasMaxLength(CandidateConsts.GitHubProfileUrlMaxLength)
-                .IsRequired();
+                .HasMaxLength(CandidateConsts.GitHubProfileUrlMaxLength);
                 entity.Property(c => c.Comments)
               .HasMaxLength(CandidateConsts.CommentMaxLength)
               .IsRequired();

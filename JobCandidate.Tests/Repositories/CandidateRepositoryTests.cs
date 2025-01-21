@@ -88,8 +88,6 @@ namespace JobCandidate.Tests.Repositories
                 PhoneNumber = "5551234567",
                 CallTimeInterval = "9 AM - 5 PM",
                 Comments = "Excellent skills in .NET development",
-                GitHubProfileUrl = "https://github.com/alicejohnson",
-                LinkedInProfileUrl = "https://linkedin.com/in/alicejohnson"
             };
 
             // Act

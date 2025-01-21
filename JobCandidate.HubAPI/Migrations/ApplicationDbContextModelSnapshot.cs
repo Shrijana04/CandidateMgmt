@@ -29,7 +29,6 @@ namespace JobCandidate.HubAPI.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CallTimeInterval")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -52,7 +51,6 @@ namespace JobCandidate.HubAPI.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("GitHubProfileUrl")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -65,12 +63,10 @@ namespace JobCandidate.HubAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LinkedInProfileUrl")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
